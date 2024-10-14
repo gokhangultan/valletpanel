@@ -16,6 +16,7 @@ import Users from "./pages/Users";
 
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import Library from "./pages/Library";
+import UsersRoles from "./pages/UsersRoles";
 
 function App() {
   const darkMode = useSelector((store) => store.global.darkMode);
@@ -61,6 +62,9 @@ function App() {
                 </Route>
                 <Route path="/library" exact>
                   <Library />
+                </Route>
+                <Route path="/usersroles" exact>
+                  <UsersRoles />
                 </Route>
               </Switch>
             </PublicLayout>
