@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-      <footer className="dark:bg-gray-50 bg-[#151529] h-20">
+      <footer className="dark:darkTheme bg-lightTheme h-20">
         <div className="text-[#fff] dark:text-[#000] h-full">
           <div className="h-full flex gap-3 justify-between items-center align-middle px-5">
             <div className="flex-[1_1_33.3%]">

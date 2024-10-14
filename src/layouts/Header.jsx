@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <div id="" className={`bg-lightTheme dark:bg-darkTheme py-2`}>
+    <div id="" className={`bg-lightTheme dark:bg-darkTheme h-[80px]`}>
       <header id="" className="">
         <div className="">
           <h1>Dark Mode Test</h1>

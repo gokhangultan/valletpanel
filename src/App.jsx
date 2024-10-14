@@ -12,8 +12,10 @@ import "react-toastify/dist/ReactToastify.css";
 import Profile from "./pages/Profile";
 import ForgotPassword from "./pages/ForgotPassword";
 import Register from "./pages/Register";
+import Users from "./pages/Users";
 
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import Library from "./pages/Library";
 
 function App() {
   const darkMode = useSelector((store) => store.global.darkMode);
@@ -51,9 +53,14 @@ function App() {
                 <Route path="/dashboard" exact>
                   <Home />
                 </Route>
-
+                <Route path="/users" exact>
+                  <Users />
+                </Route>
                 <Route path="/profile" exact>
                   <Profile />
+                </Route>
+                <Route path="/library" exact>
+                  <Library />
                 </Route>
               </Switch>
             </PublicLayout>
@@ -63,7 +70,7 @@ function App() {
       <ToastContainer
         position="top-right"
         autoClose={5000}
-        theme={darkMode ? "light" : "dark"}
+        theme={darkMode ? "dark" : "light"}
       />
     </div>
   );

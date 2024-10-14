@@ -3,7 +3,7 @@ export default function LeftSide() {
   
 
   return (
-    <div>
+    <div className="w-[310px]">
         1
     </div>
   );

@@ -7,26 +7,32 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'Avenir', 'Helvetica', 'Arial', 'sans-serif'],
+      },
       colors: {
-        'primaryColor': '#f8fbff',
+        'primaryColor': '#1C64FE',
         'secondaryColor' : '#f8fbff',
 
+        'lightModePrimary': '#1B84FF',
         'thirdColor' : '#f8fbff',
         'fourthColor' : '#f8fbff',
 
-        'textColor':'#878a99',
+        'textColor':'#252F4A',
         'darkTextColor':'#878a99',
 
         'butonColor': '#878a99',
         'darkTheme': '#878a99',
-        'lightTheme': '#878a99',
+        'lightTheme': '#F1F1F4',
 
         'cardColor': '#878a99',
         'darkCardColor': '#878a99',
 
         'darkForm': '#f8fbff',
         'lightForm': '#f8fbff',
-         
+
+         'cardColor': '#FFFFFF',
+         'darkCardColor': '#313131',
 
       },
     },
