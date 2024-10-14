@@ -34,6 +34,11 @@ export default {
          'cardColor': '#FFFFFF',
          'darkCardColor': '#313131',
 
+         'gray900':'#071437',
+         'gray700':'#4B5675',
+         'gray800': '#252F4A',
+
+
       },
     },
   },

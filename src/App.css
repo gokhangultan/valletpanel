@@ -8,6 +8,9 @@ body {
   @apply font-sans;
   margin: 0;
 }
+.formText{
+  @apply text-[#78829D] dark:text-gray-300 text-sm font-normal;
+}
 
 .primaryButton{
   @apply bg-primaryColor px-3 py-[13px] rounded-md max-w-[141px] max-h-[40px] text-white font-medium text-[13px] leading-[14px] ;
@@ -15,6 +18,9 @@ body {
 
 .ghostButton{
   @apply border border-[#DBDFE9] dark:border-[#313131] bg-white dark:bg-darkTheme px-3 py-[13px] max-w-[180px] max-h-[40px] text-[13px] leading-[14px] rounded-md text-[#4B5675] dark:text-white;
+}
+.dangerButton{
+  @apply rounded-md  px-3 py-2 max-w-[111px] max-h-[40px] bg-[#FFEEF3] border border-[#F8285A33] text-[13px] font-medium text-[#F8285A]; 
 }
 
 h1{
@@ -24,7 +30,9 @@ h1{
 h2{
   @apply text-textColor dark:text-darkTextColor font-normal leading-[22px] text-sm !important;
 }
-
+.subTitle{
+  @apply text-[#4B5675] dark:text-gray-200 font-normal text-sm py-4 px-8;
+}
 .card {
   @apply border border-lightTheme rounded-xl bg-cardColor dark:bg-darkCardColor shadow-[0px_3px_4px_0px_rgba(0,0,0,0.03)];
 }
