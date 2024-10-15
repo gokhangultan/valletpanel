@@ -16,7 +16,7 @@ export default function UsersComponent() {
     );
   };
   return (
-    <div className="max-w-[1440px] p-8">
+    <div className="max-w-[1440px] ">
       <div className="flex flex-col gap-2 ">
         <div className="flex flex-col lg:flex-row justify-between gap-2">
           <div className="flex gap-1 flex-col">
@@ -182,18 +182,17 @@ export default function UsersComponent() {
       </div>
 
       <div className="card">
-                <div className="flex justify-between py-4 px-8 pb-5 items-center">
-                  <h1 className="!text-base">Son Aktiviteler</h1>
-                  
-                </div>
-                <Divider />
-                <div className="flex flex-col justify-center items-center gap-10 py-20">
-                <img src="/noactivity.svg" className="w-[60%]" />
-                <h2 className="text-[#4B5675] dark:bg-darkTextColor">Son Aktiviteler Bu Alanda Görüntülenecektir</h2>
-                </div>
-          
-              
-              </div>
+        <div className="flex justify-between py-4 px-8 pb-5 items-center">
+          <h1 className="!text-base">Son Aktiviteler</h1>
+        </div>
+        <Divider />
+        <div className="flex flex-col justify-center items-center gap-10 py-20">
+          <img src="/noactivity.svg" className="w-[60%]" />
+          <h2 className="text-[#4B5675] dark:bg-darkTextColor">
+            Son Aktiviteler Bu Alanda Görüntülenecektir
+          </h2>
+        </div>
+      </div>
     </div>
   );
 }

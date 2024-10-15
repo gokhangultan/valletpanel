@@ -12,3 +12,27 @@ body {
   margin: 0;
 }
 
+.nav-tabs .nav-link {
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+label{
+  color: #878a99;
+}
+
+.navbar-menu .navbar-nav .nav-link {
+  padding: .75rem 0.5rem;
+}
+
+.navbar-menu .navbar-nav .nav-link {
+  color: #202224;
+}
+.btn-no-active:active {
+  background-color: initial !important;
+}
+.dynamic-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

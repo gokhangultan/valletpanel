@@ -36,3 +36,10 @@ h2{
 .card {
   @apply border border-lightTheme rounded-xl bg-cardColor dark:bg-darkCardColor shadow-[0px_3px_4px_0px_rgba(0,0,0,0.03)];
 }
+.left-nav-items{
+  @apply flex gap-2 items-center  align-middle dark:text-[#000] text-[#fff]
+}
+
+.panelContainer{
+  @apply bg-lightTheme dark:bg-darkTheme h-full p-8;
+}
