@@ -116,7 +116,7 @@ export default function EditUserComponent() {
                 </h5>
               </div>
             </div>
-            <div className="card flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+            <div className="card flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/admin.svg" />
                 <div className="flex flex-col gap-1">
@@ -129,7 +129,7 @@ export default function EditUserComponent() {
                 </div>
               </div>
             </div>
-            <div className="card flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+            <div className="card flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/admin.svg" />
                 <div className="flex flex-col gap-1">
@@ -142,7 +142,7 @@ export default function EditUserComponent() {
                 </div>
               </div>
             </div>
-            <div className="card flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+            <div className="card flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/admin.svg" />
                 <div className="flex flex-col gap-1">
@@ -155,7 +155,7 @@ export default function EditUserComponent() {
                 </div>
               </div>
             </div>
-            <div className="card flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+            <div className="card flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/admin.svg" />
                 <div className="flex flex-col gap-1">
@@ -168,7 +168,7 @@ export default function EditUserComponent() {
                 </div>
               </div>
             </div>
-            <div className="card flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+            <div className="card flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/admin.svg" />
                 <div className="flex flex-col gap-1">
@@ -181,7 +181,7 @@ export default function EditUserComponent() {
                 </div>
               </div>
             </div>
-            <div className="card flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+            <div className="card flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/admin.svg" />
                 <div className="flex flex-col gap-1">
@@ -194,7 +194,7 @@ export default function EditUserComponent() {
                 </div>
               </div>
             </div>
-            <div className="card bg-[#EAFFF1] border-[#17C653] flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+            <div className="card bg-[#EAFFF1] border-[#17C653] flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/clickrole.svg" />
                 <div className="flex flex-col gap-1">
@@ -207,7 +207,7 @@ export default function EditUserComponent() {
                 </div>
               </div>
             </div>
-            <div className="card flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+            <div className="card flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
               <div className="flex flex-row gap-2 items-center">
                 <img src="/admin.svg" />
                 <div className="flex flex-col gap-1">
@@ -249,20 +249,32 @@ export default function EditUserComponent() {
           </div>
         </div>
       </div>
-      {/* Reactstrap Modal for User Deletion */}
       <Modal isOpen={deleteModal} toggle={toggleDeleteModal}>
-        <ModalHeader toggle={toggleDeleteModal}>Kullanıcıyı Sil</ModalHeader>
-        <ModalBody>
-          <p>Bu kullanıcıyı silmek istediğinize emin misiniz?</p>
-        </ModalBody>
-        <ModalFooter>
-          <button color="danger" onClick={handleDeleteUser}>
-            Evet, Sil
+    
+          <div className="flex justify-between py-3 px-8 items-center">
+            <h1 className="!text-base">Kullanıcıyı Sil</h1>
+          </div>
+          <Divider />
+          <div className="flex justify-between  p-4 items-center">
+            <div className="flex gap-2 items-center">
+              <img src="/profile.svg" className="w-9 h-9" />
+              <div className="flex flex-col ">
+                <h1 className="!text-sm">Tyler Hero</h1>
+                <h2 className="!text-xs">Admin</h2>
+              </div>
+            </div>
+          </div>
+          <h2 className="!text-[13px]  px-4">Adlı kullanıcıyı silmek istediğinize emin misiniz?</h2>
+
+          <ModalFooter className="flex ">
+          <button className="ghostButton" onClick={handleDeleteUser}>
+            Eminim Sil!
           </button>
-          <button color="secondary" onClick={toggleDeleteModal}>
-            İptal
+          <button className="rejectButton" onClick={toggleDeleteModal}>
+            Vazgeç
           </button>
         </ModalFooter>
+      
       </Modal>
     </div>
   );

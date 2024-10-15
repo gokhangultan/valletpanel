@@ -36,3 +36,16 @@ label{
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+
+.modal-content {
+border-radius: 12px;
+}
+
+.left-nav-items{
+  @apply flex gap-2 items-center  align-middle dark:text-[#000] text-[#fff]
+}
+
+li{
+  @apply list-none
+}

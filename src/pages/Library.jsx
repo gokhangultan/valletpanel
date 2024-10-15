@@ -2,8 +2,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DonutChart from "../components/DonutChart";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { Divider } from "@mui/material";
+import { Modal, ModalFooter } from "reactstrap";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export default function Library() {
+  const [deleteModal, setDeleteModal] = useState(false);
+  const toggleDeleteModal = () => {
+    setDeleteModal(!deleteModal);
+  };
+
+  const handleDeleteUser = () => {
+    console.log("User deleted!");
+    toggleDeleteModal();
+  };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   return (
     <div className="flex gap-3 flex-col panelContainer">
       <div className="flex gap-2 flex-col">
@@ -19,6 +37,8 @@ export default function Library() {
           <button className="primaryButton">Secondary Button</button>
           <button className="ghostButton">Ghost Button</button>
           <button className="dangerButton">DangerButton</button>
+        <button className="rejectButton" >Delete </button>
+
         </div>
       </div>
       <div className="flex gap-2 flex-col">
@@ -85,7 +105,7 @@ export default function Library() {
               </h5>
             </div>
           </div>
-          <div className="card flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+          <div className="card flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
             <div className="flex flex-row gap-2 items-center">
               <img src="/admin.svg" />
               <div className="flex flex-col gap-1">
@@ -98,7 +118,7 @@ export default function Library() {
               </div>
             </div>
           </div>
-          <div className="card bg-[#EAFFF1] border-[#17C653] flex flex-col gap-4 px-8 py-4 h-[84px] w-[380px]">
+          <div className="card bg-[#EAFFF1] border-[#17C653] flex flex-col gap-4 px-8 py-3 h-[80px] w-[380px]">
             <div className="flex flex-row gap-2 items-center">
               <img src="/clickrole.svg" />
               <div className="flex flex-col gap-1">
@@ -176,6 +196,62 @@ export default function Library() {
 
           </div>
           </div>
+          <div className="flex gap-2 flex-col">
+          <p>Modals</p><button className="rejectButton" onClick={toggleDeleteModal}>Delete Modal</button>
+          <Modal isOpen={deleteModal} toggle={toggleDeleteModal}>
+    
+    <div className="flex justify-between py-3 px-8 items-center">
+      <h1 className="!text-base">Kullanıcıyı Sil</h1>
     </div>
+    <Divider />
+    <div className="flex justify-between  p-4 items-center">
+      <div className="flex gap-2 items-center">
+        <img src="/profile.svg" className="w-9 h-9" />
+        <div className="flex flex-col ">
+          <h1 className="!text-sm">Tyler Hero</h1>
+          <h2 className="!text-xs">Admin</h2>
+        </div>
+      </div>
+    </div>
+    <h2 className="!text-[13px]  px-4">Adlı kullanıcıyı silmek istediğinize emin misiniz?</h2>
+
+    <ModalFooter className="flex ">
+    <button className="ghostButton" onClick={handleDeleteUser}>
+      Eminim Sil!
+    </button>
+    <button className="rejectButton" onClick={toggleDeleteModal}>
+      Vazgeç
+    </button>
+  </ModalFooter>
+
+</Modal>
+</div>
+<div className="flex gap-2 flex-col">
+<p>Form Inputs</p>  <form>
+
+<div className="mb-3 flex flex-col gap-2">
+                        <label htmlFor="useremail">
+                          Email
+                        </label>
+                        <input
+                          {...register("email", {
+                            required: true,
+                            pattern: /^\S+@\S+$/i,
+                          })}
+                          type="email"
+                          placeholder="email@email.com"
+                          className="authFormInput"
+                        />
+                        {errors.email && (
+                          <span className="text-red-500 text-sm leading-7">
+                            Lütfen Geçerli Bir Mail Adresi Giriniz.
+                          </span>
+                        )}  <div className="invalid-feedback">
+                        Please enter email
+                      </div></div>
+                        </form>
+</div>
+    </div>
+  
   );
 }

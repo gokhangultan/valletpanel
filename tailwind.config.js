@@ -37,7 +37,7 @@ export default {
          'gray900':'#071437',
          'gray700':'#4B5675',
          'gray800': '#252F4A',
-
+        'danger':'#F8285A',
 
       },
     },

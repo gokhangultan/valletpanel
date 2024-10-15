@@ -17,10 +17,14 @@ body {
 }
 
 .ghostButton{
-  @apply border border-[#DBDFE9] dark:border-[#313131] bg-white dark:bg-darkTheme px-3 py-[13px] max-w-[180px] max-h-[40px] text-[13px] leading-[14px] rounded-md text-[#4B5675] dark:text-white;
+  @apply border border-[#DBDFE9] dark:border-[#313131] bg-white dark:bg-darkTheme px-3 py-[12px] max-w-[180px] max-h-[40px] text-[13px] leading-[14px] rounded-md text-[#4B5675] dark:text-white;
+}
+
+.rejectButton{
+  @apply border border-danger dark:border-danger bg-danger dark:bg-darkTheme px-3 py-[12px] max-w-[180px] max-h-[40px] text-[13px] leading-[14px] rounded-md text-white dark:text-white;
 }
 .dangerButton{
-  @apply rounded-md  px-3 py-2 max-w-[111px] max-h-[40px] bg-[#FFEEF3] border border-[#F8285A33] text-[13px] font-medium text-[#F8285A]; 
+  @apply rounded-md  px-3 py-2 max-w-[111px] max-h-[40px] bg-[#FFEEF3] border border-[#F8285A33] text-[13px] font-medium text-danger; 
 }
 
 h1{
@@ -42,4 +46,21 @@ h2{
 
 .panelContainer{
   @apply bg-lightTheme dark:bg-darkTheme h-full p-8;
+}
+
+.authFormInput{
+  @apply border border-[#DBDFE9] bg-[#FCFCFC] px-3 py-3 rounded-md
+}
+label{
+  @apply text-[13px] font-medium !text-[#252F4A]
+}
+.formError{
+  @apply text-red-500 text-sm leading-7
+}
+.left-nav-items{
+  @apply flex gap-2 items-center  align-middle dark:text-[#000] text-[#fff]
+}
+
+li{
+  @apply list-none
 }
