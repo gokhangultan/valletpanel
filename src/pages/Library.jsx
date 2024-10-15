@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DonutChart from "../components/DonutChart";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+import { Divider } from "@mui/material";
 
 export default function Library() {
   return (
@@ -154,6 +155,27 @@ export default function Library() {
           </div>
         </div>
       </div>
+
+      <div className="w-[714px] justify-center flex align-middle items-center h-[295px] ">
+        <div className="card flex fles-col lg:flex-row items-center justify-between p-8 ">
+          <div className="flex flex-col gap-2">
+            <h1>Çalışma Şartları</h1>
+            <h2>Çalışma şartlarınız bu alanda görüntülenecektir</h2>
+          </div>
+          <img src="/workingrules.svg" />
+        </div>
+      </div>
+
+      <div className="card">
+          <div className="flex justify-between py-4 px-8 pb-5 items-center">
+            <h1 className="!text-base">Son Alınan Ödemeler</h1>
+          </div>
+          <Divider />
+          <div className="flex justify-center py-20">
+          <img src="/recentpayments.svg" className="p-4" />
+
+          </div>
+          </div>
     </div>
   );
 }
